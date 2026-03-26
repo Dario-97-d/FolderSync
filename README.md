@@ -62,3 +62,17 @@ All file/directory creation/copying/deletion operations are logged to the log fi
 
 With the app running, the user is given the option of easily terminating the program by pressing the Esc key.
 If the Esc key is pressed, the app cleans up the resources in use and terminates.
+
+## Screenshots
+
+The app is run in debug mode with the following arguments:
+
+```c:\some_path\source c:\another_path\replica c:\sync_log.txt 15```
+
+### Prompt for folder creation
+
+![Folder creation prompt](/app-screenshots/fsync-prompt.png)
+
+### App syncing folders every 15 seconds
+
+![Syncing folders](/app-screenshots/fsync-syncing.png)
