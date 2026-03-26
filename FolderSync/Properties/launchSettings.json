@@ -2,7 +2,7 @@
   "profiles": {
     "FolderSync": {
       "commandName": "Project",
-      "commandLineArgs": "c:\\source c:\\replica c:\\fs_log.txt 15"
+      "commandLineArgs": "c:\\some_path\\source c:\\another_path\\replica c:\\sync_log.txt 15"
     }
   }
 }
