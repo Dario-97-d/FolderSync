@@ -43,6 +43,9 @@ namespace FolderSync
 
             OutputMessageReadyToSync();
 
+            Console.WriteLine("Press Esc to terminate program.");
+            Console.WriteLine();
+
             // Initial sync.
             _folderSync.SyncFolders();
 
@@ -53,10 +56,11 @@ namespace FolderSync
             // Keep program running until <Esc> is pressed.
             while (true)
             {
-                Console.WriteLine("Press Esc to terminate program.");
-
                 if (Console.ReadKey().Key == ConsoleKey.Escape)
                     break;
+
+                Console.WriteLine("Press Esc to terminate program.");
+                Console.WriteLine();
             }
 
             // -- Program terminates --
@@ -103,13 +107,15 @@ namespace FolderSync
         {
             var outputReadyToSync = new StringBuilder();
 
-            outputReadyToSync.AppendLine("Program is ready for synchronization.");
+            outputReadyToSync.AppendLine("The app is ready for synchronization.");
+            outputReadyToSync.AppendLine();
             outputReadyToSync.AppendLine($"Source path: {_folderSync.SourcePath}");
             outputReadyToSync.AppendLine($"Replica path: {_folderSync.ReplicaPath}");
             outputReadyToSync.AppendLine($"Log file path: {Logger.FilePath}");
             outputReadyToSync.AppendLine($"Synchronization interval: {_syncTimer.IntervalSeconds} seconds.");
 
             Console.WriteLine($"{outputReadyToSync}");
+
             Logger.Log($"{outputReadyToSync}");
         }
 

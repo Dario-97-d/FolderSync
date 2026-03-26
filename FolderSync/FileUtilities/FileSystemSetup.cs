@@ -17,6 +17,8 @@
                     File.Create(filePath).Dispose();
 
                     Console.WriteLine("Log file created.");
+                    Console.WriteLine();
+
                     Logger.Log("Log file created.");
                 }
 
@@ -40,6 +42,8 @@
                     Directory.CreateDirectory(path);
 
                     Console.WriteLine("The replica directory has been created.");
+                    Console.WriteLine();
+
                     Logger.Log($"The replica directory ({path}) has been created.");
                 }
 
@@ -77,6 +81,8 @@
                     Directory.CreateDirectory(path);
 
                     Console.WriteLine("The source directory has been created.");
+                    Console.WriteLine();
+
                     Logger.Log($"The source directory ({path}) has been created.");
                 }
 
