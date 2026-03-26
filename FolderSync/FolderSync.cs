@@ -58,6 +58,8 @@ namespace FolderSync
                 // Sync contents.
                 DeleteObsoleteContent(SourcePath, ReplicaPath);
                 CopyNewContent(SourcePath, ReplicaPath);
+
+                Console.WriteLine($"Synchronized folders at {DateTime.UtcNow}.");
             }
             catch (Exception ex)
             {
